@@ -8,7 +8,7 @@ https://replicate.com/fofr/face-to-many (you have to set up billing)
 3. run pinokio and click the discover button 
 ![image](https://github.com/aj47/techfren-vids/assets/8023513/60057147-820c-438e-bbf4-197528fdf0ee)
 4. search for comfyui and download it
-<img src="https://github.com/aj47/techfren-vids/assets/8023513/d4d55f24-d035-4efe-b5f2-155e8b7d8dbe" width="200" height="200"/>
+<img src="https://github.com/aj47/techfren-vids/assets/8023513/d4d55f24-d035-4efe-b5f2-155e8b7d8dbe" width="400" height="400"/>
 
 5. after downloaded, click install (you might need to install a few times for some reason) ![image](https://github.com/aj47/techfren-vids/assets/8023513/88a42758-f0b7-4b83-b414-4201fd726b2e)
 6. click start to run the project (might need to click run as well) ![image](https://github.com/aj47/techfren-vids/assets/8023513/b26814e7-4641-4547-b9e6-41da22392ed7)
