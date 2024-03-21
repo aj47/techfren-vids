@@ -10,7 +10,7 @@ https://replicate.com/fofr/face-to-many (you have to set up billing)
 4. search for comfyui and download it
 <img src="https://github.com/aj47/techfren-vids/assets/8023513/d4d55f24-d035-4efe-b5f2-155e8b7d8dbe" width="200" height="200"/>
 
-5. after downloaded, click install ![image](https://github.com/aj47/techfren-vids/assets/8023513/88a42758-f0b7-4b83-b414-4201fd726b2e)
+5. after downloaded, click install (you might need to install a few times for some reason) ![image](https://github.com/aj47/techfren-vids/assets/8023513/88a42758-f0b7-4b83-b414-4201fd726b2e)
 6. click start to run the project (might need to click run as well) ![image](https://github.com/aj47/techfren-vids/assets/8023513/b26814e7-4641-4547-b9e6-41da22392ed7)
 7. click the URL shown to open the UI ![image](https://github.com/aj47/techfren-vids/assets/8023513/c4c7428d-ee63-44e6-b1d6-15e6228754b7)
 8. download the .json file in this repository https://github.com/aj47/techfren-vids/blob/main/comfyui/face-to-many.json
