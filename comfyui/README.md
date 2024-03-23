@@ -3,7 +3,7 @@ use this link:
 https://replicate.com/fofr/face-to-many (you have to set up billing)
 
 # To run locally:
-1. [Download pinokio](https://pinokio.computer/)
+1. [Download pinokio](https://pinokio.computer/) OR SKIP TO STEP 7 IF YOU ALREADY HAVE COMFYUI
 2. install pinokio
 3. run pinokio and click the discover button 
 ![image](https://github.com/aj47/techfren-vids/assets/8023513/60057147-820c-438e-bbf4-197528fdf0ee)
