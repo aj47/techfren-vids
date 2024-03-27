@@ -747,8 +747,8 @@
         "Node name for S&R": "ImageResize+"
       },
       "widgets_values": [
-        4096,
-        4096,
+        1024,
+        1024,
         "nearest",
         true,
         "always",
@@ -792,7 +792,7 @@
       },
       "widgets_values": [
         "Zoe-DepthMapPreprocessor",
-        4096
+        1024
       ]
     },
     {
