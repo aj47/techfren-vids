@@ -1,61 +1,7 @@
 {
-  "last_node_id": 75,
-  "last_link_id": 107,
+  "last_node_id": 77,
+  "last_link_id": 112,
   "nodes": [
-    {
-      "id": 28,
-      "type": "Control Net Stacker",
-      "pos": [
-        930,
-        130
-      ],
-      "size": {
-        "0": 315,
-        "1": 146
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "control_net",
-          "type": "CONTROL_NET",
-          "link": 34
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 88
-        },
-        {
-          "name": "cnet_stack",
-          "type": "CONTROL_NET_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CNET_STACK",
-          "type": "CONTROL_NET_STACK",
-          "links": [
-            81
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Control Net Stacker"
-      },
-      "widgets_values": [
-        0.8,
-        0,
-        1
-      ],
-      "color": "#223322",
-      "bgcolor": "#335533",
-      "shape": 1
-    },
     {
       "id": 51,
       "type": "VAEEncode",
@@ -68,7 +14,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -98,105 +44,6 @@
       }
     },
     {
-      "id": 41,
-      "type": "ApplyInstantID",
-      "pos": [
-        1845,
-        130
-      ],
-      "size": {
-        "0": 315,
-        "1": 266
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "instantid",
-          "type": "INSTANTID",
-          "link": 49
-        },
-        {
-          "name": "insightface",
-          "type": "FACEANALYSIS",
-          "link": 50
-        },
-        {
-          "name": "control_net",
-          "type": "CONTROL_NET",
-          "link": 48
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 106
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 60
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 56
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 55
-        },
-        {
-          "name": "image_kps",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            101
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "POSITIVE",
-          "type": "CONDITIONING",
-          "links": [
-            58
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "NEGATIVE",
-          "type": "CONDITIONING",
-          "links": [
-            57
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ApplyInstantID"
-      },
-      "widgets_values": [
-        1,
-        0,
-        1
-      ]
-    },
-    {
       "id": 40,
       "type": "ControlNetLoader",
       "pos": [
@@ -214,9 +61,7 @@
         {
           "name": "CONTROL_NET",
           "type": "CONTROL_NET",
-          "links": [
-            48
-          ],
+          "links": [],
           "shape": 3,
           "slot_index": 0
         }
@@ -229,18 +74,284 @@
       ]
     },
     {
+      "id": 35,
+      "type": "InstantIDModelLoader",
+      "pos": [
+        1429,
+        -180
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INSTANTID",
+          "type": "INSTANTID",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InstantIDModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter.bin"
+      ]
+    },
+    {
+      "id": 75,
+      "type": "Reroute",
+      "pos": [
+        2616,
+        104.24929295578377
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 107
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CONDITIONING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 76,
+      "type": "Reroute",
+      "pos": [
+        1776,
+        133.09150041852678
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 5,
+      "type": "SaveImage",
+      "pos": [
+        97,
+        92
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 77,
+      "type": "Reroute",
+      "pos": [
+        818,
+        346.2406380242335
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": [
+            109
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 36,
+      "type": "InstantIDFaceAnalysis",
+      "pos": [
+        1428,
+        -71
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FACEANALYSIS",
+          "type": "FACEANALYSIS",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InstantIDFaceAnalysis"
+      },
+      "widgets_values": [
+        "CUDA"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        515,
+        130
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 105
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            88
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "Zoe-DepthMapPreprocessor",
+        1024
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        98,
+        -289
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "latest.png",
+        "image"
+      ]
+    },
+    {
       "id": 67,
       "type": "ImageResize+",
       "pos": [
-        580,
-        -282
+        516,
+        -399
       ],
       "size": {
         "0": 315,
         "1": 218
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -255,8 +366,7 @@
           "type": "IMAGE",
           "links": [
             104,
-            105,
-            106
+            105
           ],
           "shape": 3,
           "slot_index": 0
@@ -287,193 +397,24 @@
       ]
     },
     {
-      "id": 49,
-      "type": "AIO_Preprocessor",
-      "pos": [
-        515,
-        130
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 105
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            88
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AIO_Preprocessor"
-      },
-      "widgets_values": [
-        "Zoe-DepthMapPreprocessor",
-        1024
-      ]
-    },
-    {
-      "id": 24,
-      "type": "ControlNetLoader",
-      "pos": [
-        504,
-        261
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            34
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "instantid-controlnet.safetensors"
-      ]
-    },
-    {
-      "id": 35,
-      "type": "InstantIDModelLoader",
-      "pos": [
-        1429,
-        -180
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INSTANTID",
-          "type": "INSTANTID",
-          "links": [
-            49
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "InstantIDModelLoader"
-      },
-      "widgets_values": [
-        "ip-adapter.bin"
-      ]
-    },
-    {
-      "id": 36,
-      "type": "InstantIDFaceAnalysis",
-      "pos": [
-        1428,
-        -71
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FACEANALYSIS",
-          "type": "FACEANALYSIS",
-          "links": [
-            50
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "InstantIDFaceAnalysis"
-      },
-      "widgets_values": [
-        "CUDA"
-      ]
-    },
-    {
-      "id": 75,
-      "type": "Reroute",
-      "pos": [
-        2616,
-        104.24929295578377
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 107
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "CONDITIONING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      }
-    },
-    {
       "id": 3,
       "type": "LoRA Stacker",
       "pos": [
-        923,
-        351
+        969,
+        415
       ],
       "size": {
         "0": 315,
         "1": 226
       },
       "flags": {},
-      "order": 4,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "lora_stack",
           "type": "LORA_STACK",
-          "link": null
+          "link": 109
         }
       ],
       "outputs": [
@@ -698,31 +639,31 @@
       "id": 4,
       "type": "KSampler (Efficient)",
       "pos": [
-        2260,
-        130
+        82,
+        433
       ],
       "size": {
         "0": 325,
         "1": 562
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 101
+          "link": 110
         },
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 58
+          "link": 111
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 57
+          "link": 112
         },
         {
           "name": "latent_image",
@@ -791,11 +732,11 @@
         "Node name for S&R": "KSampler (Efficient)"
       },
       "widgets_values": [
-        1051763972092584,
+        1051763972092653,
         null,
         22,
-        7,
-        "dpmpp_2m_sde",
+        7.5,
+        "dpmpp_2m_sde_gpu",
         "karras",
         0.65,
         "none",
@@ -803,6 +744,92 @@
       ],
       "color": "#223333",
       "bgcolor": "#335555",
+      "shape": 1
+    },
+    {
+      "id": 24,
+      "type": "ControlNetLoader",
+      "pos": [
+        644,
+        -4
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            34
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "instantid-controlnet.safetensors"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "Control Net Stacker",
+      "pos": [
+        930,
+        105
+      ],
+      "size": {
+        "0": 315,
+        "1": 146
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 34
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 88
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CNET_STACK",
+          "type": "CONTROL_NET_STACK",
+          "links": [
+            81
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Control Net Stacker"
+      },
+      "widgets_values": [
+        0,
+        0,
+        1
+      ],
+      "color": "#223322",
+      "bgcolor": "#335533",
       "shape": 1
     },
     {
@@ -814,10 +841,10 @@
       ],
       "size": {
         "0": 400,
-        "1": 654
+        "1": 750
       },
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -836,7 +863,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            60
+            110
           ],
           "shape": 3,
           "slot_index": 0
@@ -845,7 +872,7 @@
           "name": "CONDITIONING+",
           "type": "CONDITIONING",
           "links": [
-            56
+            111
           ],
           "shape": 3,
           "slot_index": 1
@@ -854,7 +881,7 @@
           "name": "CONDITIONING-",
           "type": "CONDITIONING",
           "links": [
-            55
+            112
           ],
           "shape": 3,
           "slot_index": 2
@@ -862,7 +889,9 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [],
+          "links": [
+            108
+          ],
           "shape": 3,
           "slot_index": 3
         },
@@ -899,7 +928,7 @@
         "PS1Redmond-PS1Game-Playstation1Graphics.safetensors",
         1,
         1,
-        "ps1 graphics, video game, 3d, silent hill, pixelated, psx, gamecube, dark",
+        "ps1 graphics, video game, 3d, silent hill, pixelated, psx, gamecube, dinosaur, trees",
         "photo, photography, ugly, broken, watermark",
         "none",
         "comfy",
@@ -910,71 +939,6 @@
       "color": "#222233",
       "bgcolor": "#333355",
       "shape": 1
-    },
-    {
-      "id": 5,
-      "type": "SaveImage",
-      "pos": [
-        97,
-        92
-      ],
-      "size": {
-        "0": 315,
-        "1": 270
-      },
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 7
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "ComfyUI"
-      ]
-    },
-    {
-      "id": 22,
-      "type": "LoadImage",
-      "pos": [
-        98,
-        -289
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            103
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "AE53F1F6-01FB-41CB-9511-270EF0FC8C59.jpeg",
-        "image"
-      ]
     }
   ],
   "links": [
@@ -1001,70 +965,6 @@
       28,
       0,
       "CONTROL_NET"
-    ],
-    [
-      48,
-      40,
-      0,
-      41,
-      2,
-      "CONTROL_NET"
-    ],
-    [
-      49,
-      35,
-      0,
-      41,
-      0,
-      "INSTANTID"
-    ],
-    [
-      50,
-      36,
-      0,
-      41,
-      1,
-      "FACEANALYSIS"
-    ],
-    [
-      55,
-      2,
-      2,
-      41,
-      6,
-      "CONDITIONING"
-    ],
-    [
-      56,
-      2,
-      1,
-      41,
-      5,
-      "CONDITIONING"
-    ],
-    [
-      57,
-      41,
-      2,
-      4,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      58,
-      41,
-      1,
-      4,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      60,
-      2,
-      0,
-      41,
-      4,
-      "MODEL"
     ],
     [
       81,
@@ -1107,14 +1007,6 @@
       "LATENT"
     ],
     [
-      101,
-      41,
-      0,
-      4,
-      0,
-      "MODEL"
-    ],
-    [
       103,
       22,
       0,
@@ -1139,20 +1031,52 @@
       "IMAGE"
     ],
     [
-      106,
-      67,
-      0,
-      41,
-      3,
-      "IMAGE"
-    ],
-    [
       107,
       4,
       2,
       75,
       0,
       "*"
+    ],
+    [
+      108,
+      2,
+      3,
+      76,
+      0,
+      "*"
+    ],
+    [
+      109,
+      77,
+      0,
+      3,
+      0,
+      "LORA_STACK"
+    ],
+    [
+      110,
+      2,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      111,
+      2,
+      1,
+      4,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      112,
+      2,
+      2,
+      4,
+      2,
+      "CONDITIONING"
     ]
   ],
   "groups": [],
