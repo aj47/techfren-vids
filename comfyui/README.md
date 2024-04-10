@@ -20,7 +20,7 @@ https://replicate.com/fofr/face-to-many (you have to set up billing)
 12. click install missing custom nodes ![image](https://github.com/aj47/techfren-vids/assets/8023513/33e77b9e-4c72-430c-8d3b-971ea1fe02ca)
 13. after thats done click 'install models' and then search 'instantid' and install 'ip-adapter.bin' ![image](https://github.com/aj47/techfren-vids/assets/8023513/bf92a339-42e8-4ca0-bd38-4d34d5736c4b)
 14. download instantid controlnet model from here: https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true
-15. place the file from 14 in your controlnet folder like this: C:\Users\<YOUR USERNAME>\pinokio\api\comfyui.git\app\models\controlnet\instantid (you can find the files folder from pinokio by clicking the files button) ![image](https://github.com/aj47/techfren-vids/assets/8023513/abe1b654-42f5-4a60-9401-bbbd9163af4d)
+15. place the file from 14 in your controlnet folder like this: C:\Users\<YOUR USERNAME>\pinokio\api\comfyui.git\app\models\controlnet (you can find the files folder from pinokio by clicking the files button) ![image](https://github.com/aj47/techfren-vids/assets/8023513/abe1b654-42f5-4a60-9401-bbbd9163af4d)
 16. download aldebobaseXL from here: https://huggingface.co/frankjoshua/albedobaseXL_v13/resolve/main/albedobaseXL_v13.safetensors?download=true
 17. place the file from 16 in your checkpoints folder like: C:\Users\<YOUR USERNAME>\pinokio\api\comfyui.git\app\models\checkpoints
 18. download ps1 LORA from: https://huggingface.co/artificialguybr/ps1redmond-ps1-game-graphics-lora-for-sdxl/resolve/main/PS1Redmond-PS1Game-Playstation1Graphics.safetensors?download=true
