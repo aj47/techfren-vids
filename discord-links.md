@@ -1,4 +1,4 @@
-###General Tech / AI discords:
+### General Tech / AI discords:
 
 techfrens community: https://discord.gg/M4RT8ZKk4U
 
@@ -10,7 +10,7 @@ Nous Research: https://discord.gg/nousresearch
 
 
 ---
-###project specific discords:
+### Project specific discords:
 
 GPTCALL.net / AIDARK: https://discord.gg/NDYvDQbS8N
 
@@ -25,4 +25,7 @@ Cline: https://discord.gg/cline
 Agent Zero: https://discord.gg/wYVZ7H6VUs
 
 Pinokio: https://discord.gg/zV5pnusrEn
+
+K-Scale Labs (Open Source Robotics): https://discord.gg/kscale
+
 ---
